@@ -1,0 +1,12 @@
+{
+	"name": "consistence/consistence-jms-serializer-symfony",
+	"description": "Symfony Bundle integrating Consistence library with JMS Serializer",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Vašek Purchart",
+			"email": "me@vasekpurchart.cz",
+			"homepage": "http://vasekpurchart.cz"
+		}
+	]
+}
