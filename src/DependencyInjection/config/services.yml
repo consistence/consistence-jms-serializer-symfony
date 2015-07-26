@@ -1,0 +1,5 @@
+services:
+    consistence.jms_serializer.enum.enum_serializer_handler:
+        class: Consistence\JmsSerializer\Enum\EnumSerializerHandler
+        tags:
+            - { name: jms_serializer.subscribing_handler }
