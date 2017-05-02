@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace Consistence\JmsSerializer\SymfonyBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
@@ -21,10 +23,7 @@ class ConsistenceJmsSerializerExtension extends \Symfony\Component\HttpKernel\De
 		$loader->load('services.yml');
 	}
 
-	/**
-	 * @return string
-	 */
-	public function getAlias()
+	public function getAlias(): string
 	{
 		return self::ALIAS;
 	}

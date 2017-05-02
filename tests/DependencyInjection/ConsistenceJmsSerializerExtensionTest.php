@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace Consistence\JmsSerializer\SymfonyBundle\DependencyInjection;
 
 use Consistence\JmsSerializer\Enum\EnumSerializerHandler;
@@ -10,7 +12,7 @@ class ConsistenceJmsSerializerExtensionTest extends \Matthias\SymfonyDependencyI
 	/**
 	 * @return \Symfony\Component\DependencyInjection\Extension\ExtensionInterface[]
 	 */
-	protected function getContainerExtensions()
+	protected function getContainerExtensions(): array
 	{
 		return [
 			new ConsistenceJmsSerializerExtension(),
