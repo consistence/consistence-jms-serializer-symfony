@@ -73,7 +73,7 @@ Now everything is ready to be used, when you serialize the object, only `female`
 
 namespace Consistence\JmsSerializer\Example\User;
 
-/** @var $serializer \JMS\Serializer\Serializer */
+/** @var \JMS\Serializer\Serializer $serializer */
 $user = new User(Sex::get(Sex::FEMALE));
 var_dump($serializer->serialize($user, 'json'));
 
@@ -93,7 +93,7 @@ And when you deserialize the object, you will receive the `Sex` enum object agai
 
 namespace Consistence\JmsSerializer\Example\User;
 
-/** @var $serializer \JMS\Serializer\Serializer */
+/** @var \JMS\Serializer\Serializer $serializer */
 var_dump($serializer->deserialize('{
    "sex": "female"
 }', User::class, 'json'));
@@ -128,7 +128,7 @@ While deserializing, there can be an invalid value given, an exception will be t
 
 namespace Consistence\JmsSerializer\Example\User;
 
-/** @var $serializer \JMS\Serializer\Serializer */
+/** @var \JMS\Serializer\Serializer $serializer */
 var_dump($serializer->deserialize('{
    "sex": "FOO"
 }', User::class, 'json'));
@@ -192,7 +192,7 @@ class RoleEnum extends \Consistence\Enum\Enum
 class RolesEnum extends \Consistence\Enum\MultiEnum
 {
 
-	/** @var integer[] format: single Enum value (string) => MultiEnum value (integer) */
+	/** @var int[] format: single Enum value (string) => MultiEnum value (int) */
 	private static $singleMultiMap = [
 		RoleEnum::USER => 1,
 		RoleEnum::EMPLOYEE => 2,
@@ -208,7 +208,7 @@ class RolesEnum extends \Consistence\Enum\MultiEnum
 	 * Converts value representing a value from single Enum to MultiEnum counterpart
 	 *
 	 * @param string $singleEnumValue
-	 * @return integer
+	 * @return int
 	 */
 	protected static function convertSingleEnumValueToValue($singleEnumValue): int
 	{
@@ -218,7 +218,7 @@ class RolesEnum extends \Consistence\Enum\MultiEnum
 	/**
 	 * Converts value representing a value from MultiEnum to single Enum counterpart
 	 *
-	 * @param integer $value
+	 * @param int $value
 	 * @return string
 	 */
 	protected static function convertValueToSingleEnumValue(int $value): string
@@ -259,7 +259,7 @@ $user = new User(RolesEnum::getMultiByEnums([
 	RoleEnum::get(RoleEnum::ADMIN),
 ]));
 
-/** @var $serializer \JMS\Serializer\Serializer */
+/** @var \JMS\Serializer\Serializer $serializer */
 var_dump($serializer->serialize($user, 'json'));
 
 /*
@@ -281,7 +281,7 @@ Deserialization then again works symmetrically - giving an array of single `Enum
 
 namespace Consistence\JmsSerializer\Example\User;
 
-/** @var $serializer \JMS\Serializer\Serializer */
+/** @var \JMS\Serializer\Serializer $serializer */
 var_dump($serializer->deserialize('{
    "roles": [
       "user",
