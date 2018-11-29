@@ -11,8 +11,8 @@
 	],
 	"require": {
 		"php": "~7.2",
-		"consistence/consistence-jms-serializer": "~1.0",
-		"jms/serializer-bundle": "~1.0|~2.0",
+		"consistence/consistence-jms-serializer": "~2.0",
+		"jms/serializer-bundle": "~3.0",
 		"symfony/config": "~3.4|~4.0",
 		"symfony/dependency-injection": "~3.4|~4.0",
 		"symfony/http-kernel": "~3.4|~4.0",
