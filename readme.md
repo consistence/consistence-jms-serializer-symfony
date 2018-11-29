@@ -314,14 +314,11 @@ composer require consistence/consistence-jms-serializer-symfony
 2) Register the bundle in your application kernel:
 
 ```php
-// app/AppKernel.php
-public function registerBundles()
-{
-	return [
-		// ...
-		new Consistence\JmsSerializer\SymfonyBundle\ConsistenceJmsSerializerBundle(),
-	];
-}
+// config/bundles.php
+return [
+	// ...
+	Consistence\JmsSerializer\SymfonyBundle\ConsistenceJmsSerializerBundle::class => ['all' => true],
+];
 ```
 
 That's all, you are good to go!
