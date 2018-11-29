@@ -10,6 +10,7 @@
 		}
 	],
 	"require": {
+		"php": "~7.1",
 		"consistence/consistence-jms-serializer": "~1.0",
 		"jms/serializer-bundle": "~1.0|~2.0",
 		"symfony/config": "~3.0",
@@ -18,7 +19,7 @@
 		"symfony/yaml": "~3.0"
 	},
 	"require-dev": {
-		"consistence/coding-standard": "2.4",
+		"consistence/coding-standard": "3.5",
 		"jakub-onderka/php-console-highlighter": "0.3.2",
 		"jakub-onderka/php-parallel-lint": "1.0",
 		"matthiasnoback/symfony-dependency-injection-test": "2.3.1",

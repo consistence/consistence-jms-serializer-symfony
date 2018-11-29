@@ -19,7 +19,7 @@ class ConsistenceJmsSerializerExtensionTest extends \Matthias\SymfonyDependencyI
 		];
 	}
 
-	public function testRegisterSerializerHandler()
+	public function testRegisterSerializerHandler(): void
 	{
 		$this->load();
 
