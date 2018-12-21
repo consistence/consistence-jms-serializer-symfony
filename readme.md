@@ -311,7 +311,7 @@ Installation
 composer require consistence/consistence-jms-serializer-symfony
 ```
 
-2) Register the bundle in your application kernel:
+2) Register the bundle in your application:
 
 ```php
 // config/bundles.php
