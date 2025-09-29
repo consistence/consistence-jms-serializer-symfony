@@ -27,7 +27,6 @@ $config = $config->ignoreErrorsOnPackages([
 $config = $config->ignoreErrorsOnPackages([
 	'consistence/coding-standard',
 	'phing/phing',
-	'phpunit/phpunit',
 	'php-parallel-lint/php-console-highlighter',
 	'php-parallel-lint/php-parallel-lint',
 ], [ErrorType::UNUSED_DEPENDENCY]);
